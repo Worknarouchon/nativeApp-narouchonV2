@@ -6,6 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { Camera } from '@ionic-native/camera';
+import { CardIO } from '@ionic-native/card-io';
+import { PhotoViewer } from '@ionic-native/photo-viewer';
+import { Clipboard } from '@ionic-native/clipboard';
+import { VideoPlayer } from '@ionic-native/video-player';
+
+
 
 @NgModule({
   declarations: [
@@ -24,7 +31,12 @@ import { HomePage } from '../pages/home/home';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera,
+    CardIO,
+    PhotoViewer,
+    Clipboard,
+    VideoPlayer
   ]
 })
 export class AppModule {}
